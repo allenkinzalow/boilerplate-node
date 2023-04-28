@@ -21,20 +21,12 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        env:
-          GITHUB_TOKEN: ${{ secrets.READ_PACKAGES }}
 
       - name: Lint
         run: yarn lint
-        env:
-          GITHUB_TOKEN: ${{ secrets.READ_PACKAGES }}
 
       - name: Build
         run: yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.READ_PACKAGES }}
 
       - name: Test
         run: yarn test
-        env:
-          GITHUB_TOKEN: ${{ secrets.READ_PACKAGES }}
